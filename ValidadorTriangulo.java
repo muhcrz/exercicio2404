@@ -21,12 +21,21 @@ public class ValidadorTriangulo{
 
     //Processamento 
     if ((a <(b+c)) && (b< (a+c)) && ( c < (a+b))){
+        
         //É triângulo
         System.out.printf("\n%d, %d e %d formam triangulo!\n", a, b, c);
-    } else {
-        //Não é triângulo
-        System.out.printf("\n%d, %d e %d NÃO formam triângulo!\n", a, b, c);
-     }}
- 
 
-}
+         //Verificador de triângulo
+        
+         if (a == b && b == c) {
+            System.out.println("Tipo: Equilátero ");
+        } else if (a == b || a == c || b == c) {
+            System.out.println("Tipo: Isósceles");
+        } else {
+            System.out.println("Tipo: Escaleno ");
+        }
+    } else {
+        // Não é triângulo
+        System.out.printf("\n%d, %d e %d NÃO formam um triângulo!\n", a, b, c);
+    
+    }}}
